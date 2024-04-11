@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+
+ul.main-menu li {
+    display: inline; 
+}
+
+header  {
+    
+}
+search {
+    
+    
+}
+li.social-menu__icons {
+  
+   
+    
+}
+.social-menu__icons {
+    width: 2rem;
+    height: 2rem;
+    
+}
