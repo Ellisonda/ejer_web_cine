@@ -20,6 +20,10 @@ header  {
   width: 100%;
   text-transform: uppercase;
   font-family: "Roboto Condensed", sans-serif;
+  position: fixed;
+  z-index: 100;
+  align-items: center;
+  padding: 10px;
 }
 .tools-menu {
   display: inline-flex;
