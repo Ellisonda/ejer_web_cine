@@ -1,3 +1,50 @@
+/*RESET CSS */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul, menu {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*----------------------------------------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -5,64 +52,76 @@
     background-color: #1B1D24;
 }
 
-
-ul.main-menu  {
+main {
+    /* background-color: #f2f2f2;  */
+}
+menu.main-menu  {
     display: flex; 
   list-style: none;
-  gap: 20px;
+  gap: 50px;
+  font-weight: 600;
+}
+.wrapper {
+    max-inline-size: 1200px;
+    margin-inline: auto;
 }
 
 header  {
     display:flex;
-    justify-content:space-around;
-  background-color: #1B1D24;
-  color: white;
-  width: 100%;
-  text-transform: uppercase;
-  font-family: "Roboto Condensed", sans-serif;
-  position: fixed;
-  z-index: 100;
-  align-items: center;
-  padding: 10px;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #1B1D24;
+    color: white;
+    margin: 0 auto; /*importante para centrarlo*/
+    text-transform: uppercase;
+    font-family: "Roboto Condensed", sans-serif;
+  /* position: fixed; */ /*Lo he desactivado para que no cause conflicto y lo traslade al left*/
+    top:0;
+  /* z-index: 100; */
+    min-height: 89px;
 }
 .tools-menu {
-  display: inline-flex;
-  
+  display: flex;
+  gap: 100px;
 }
-hero-banner__img {
-    width: 100px;
-    height: 100px;
-    
-    
+ul.social-menu {
+    gap: 30px;
+    display: flex;
 }
-li.social-menu__icons {
-  display:inline-flex;
-   
-    
-}
+
+
 .social-menu__icons {
     width: 2rem;
     height: 2rem;
   color:white;
+ 
     
 }
 .hero-banner {
     background-color: #1B1D24;
     position: relative;
     display: flex;
-    margin-left: 10%;
-
+    margin-left: 18%;
+    padding-bottom: 200px;
+    
+}
+.hero-banner__img {
+    max-height: 610px;
+    width: 75%;
+    flex-basis: 74%;
+    object-fit: cover; /* esto me recorta la imagen para cubrirla, no la estira*/
 }
 .hero-banner__data {
     color: white;
     position: absolute;
     bottom: 0%;
-    left: 50%;
+    left: 62%;
     background-color: #1B1D24;
-    height: 40vh;
-    letter-spacing: 1px;
+    height: 36vh;
     line-height: 25px;
-    padding: 30px;
+    padding-top: 33px;
+    padding-left: 29px;
+    max-width: 400px;
     
     h1 {
         font-family: "Roboto Condensed", sans-serif;
@@ -82,16 +141,85 @@ li.social-menu__icons {
         font-weight: 200;
         font-size: 0.9em;
         margin-bottom: 10%;
+        line-height: 23px;
+        color:#a8a8a8;
     }
 }
 a {
     text-decoration: none;
     color: white;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 .aside {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
     color: white;
+    width: 25%;
+    margin-left: 20px;
     
+}
+.aside__title {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.aside__list {
+    width: 300px;
 }
 .aside__item {
     list-style: none;
+    display: flex;
+    
+    img {
+        padding: 10px;
+    }
+    h3 {
+        padding: 10px;
+        
+    }
+    time {
+        padding: 10px;
+        font-size: 12px;
+        color: #a8a8a8;
+    }
+}
+.slider-films {
+    position: relative;
+}
+.slider-films__button {
+    font-size: 13px;
+    color: #b8b8b8;
+    background-color: transparent;
+    border: 0;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+}
+.slider__images{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 20%;
+}
+.slide1 {
+    background-image: url(img/post-19-copyright-485x598.jpg);
+    
+}
+.slide2 {
+    background-image: url(img/post-20-copyright-485x598.jpg);
+  
+}
+.slide3 {
+    background-image: url(img/post-21-copyright-485x598.jpg);
+    
+}
+.slide4 {
+    background-image: url(img/post-22-copyright-485x598.jpg);
+   
+}
+.slide5 {
+    background-image: url(img/post-23-copyright-485x598.jpg);
+   
 }
