@@ -51,9 +51,15 @@ table {
     box-sizing: content-box;
     background-color: #1B1D24;
 }
-
+body {
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+.background-dark {
+    background-color: #1a1d24;
+}
 main {
-    /* background-color: #f2f2f2;  */
+     background-color: #f2f2f2;  
 }
 menu.main-menu  {
     display: flex; 
@@ -65,14 +71,16 @@ menu.main-menu  {
     max-inline-size: 1200px;
     margin-inline: auto;
 }
-
+.header, .main-menu, .tools-menu, .social-menu {
+    display: flex;
+}
 header  {
-    display:flex;
+    
     justify-content:space-between;
     align-items: center;
     background-color: #1B1D24;
     color: white;
-    margin: 0 auto; /*importante para centrarlo*/
+    padding-block: 44px 29px;/*importante para centrarlo*/
     text-transform: uppercase;
     font-family: "Roboto Condensed", sans-serif;
   /* position: fixed; */ /*Lo he desactivado para que no cause conflicto y lo traslade al left*/
@@ -81,21 +89,18 @@ header  {
     min-height: 89px;
 }
 .tools-menu {
-  display: flex;
+  
   gap: 100px;
 }
 ul.social-menu {
     gap: 30px;
-    display: flex;
 }
 
 
 .social-menu__icons {
-    width: 2rem;
-    height: 2rem;
+    width: 16px;
+    height: 16px;
   color:white;
- 
-    
 }
 .hero-banner {
     background-color: #1B1D24;
@@ -148,10 +153,10 @@ ul.social-menu {
 a {
     text-decoration: none;
     color: white;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 1px;
 }
 .aside {
@@ -188,6 +193,7 @@ a {
 }
 .slider-films {
     position: relative;
+    display: flex;
 }
 .slider-films__button {
     font-size: 13px;
@@ -197,7 +203,9 @@ a {
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
 }
-.slider__images{
+.slider__slide{
+    display: flex;
+    position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
