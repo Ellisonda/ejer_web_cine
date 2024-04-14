@@ -49,13 +49,13 @@ table {
     margin: 0;
     padding: 0;
     box-sizing: content-box;
-    background-color: #1B1D24;
+    
 }
 body {
     font-family: "Roboto", sans-serif;
     color: white;
 }
-.background-dark {
+.background-dark { /*Este backgroun nos permite martener el fondo oscuro en los margenes de header y en la parte del slider*/
     background-color: #1a1d24;
 }
 main {
@@ -73,6 +73,11 @@ menu.main-menu  {
 }
 .header, .main-menu, .tools-menu, .social-menu {
     display: flex;
+}
+button, svg, a:hover, .main-menu, .aside__subtitle {
+    cursor: pointer;
+} {
+
 }
 header  {
     
@@ -102,6 +107,11 @@ ul.social-menu {
     height: 16px;
   color:white;
 }
+
+
+/*HERO BANNER*/
+
+
 .hero-banner {
     background-color: #1B1D24;
     position: relative;
@@ -127,6 +137,7 @@ ul.social-menu {
     padding-top: 33px;
     padding-left: 29px;
     max-width: 400px;
+    margin-bottom: 90px;
     
     h1 {
         font-family: "Roboto Condensed", sans-serif;
@@ -159,6 +170,11 @@ a {
     font-size: 13px;
     letter-spacing: 1px;
 }
+
+
+                            /*Aside con news*/
+
+
 .aside {
     font-family: "Roboto", sans-serif;
     font-size: 0.9rem;
@@ -177,10 +193,7 @@ a {
 .aside__item {
     list-style: none;
     display: flex;
-    
-    img {
-        padding: 10px;
-    }
+    padding: 10px;
     h3 {
         padding: 10px;
         
@@ -191,17 +204,30 @@ a {
         color: #a8a8a8;
     }
 }
+
+                        /*Slider de peliculas*/
 .slider-films {
     position: relative;
-    display: flex;
+    top: -120px;
+   
+}
+.slider-films__buttons {
+    margin-bottom: 34px;
 }
 .slider-films__button {
     font-size: 13px;
+    letter-spacing: 1.1px;
     color: #b8b8b8;
     background-color: transparent;
     border: 0;
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
+}
+.slider {
+    display: flex;
+    height: 300px;
+    gap: 20px;
+
 }
 .slider__slide{
     display: flex;
@@ -210,6 +236,27 @@ a {
     background-size: cover;
     height: 100%;
     width: 20%;
+    align-items: end;
+   
+}
+.slider__slide > svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 16px;
+    fill: currentColor;
+    width: 16px;
+    border: 2px solid rgb(255 255 255 / 0.5);
+    border-radius: 50%;
+    padding: 5%;
+    translate: -50% -50%; /*IMPORTANTE: esta regla, de manera conjunta con el position:absolute es lo q nos permite centrar realmente en el centro*/
+}
+.slider__slide:hover > svg {
+    border: 2px solid rgb(255 255 255 / 1);
+    transition: .4s;
+}
+.slider__slide > div {
+    padding: 18px;
 }
 .slide1 {
     background-image: url(img/post-19-copyright-485x598.jpg);
@@ -220,11 +267,11 @@ a {
   
 }
 .slide3 {
-    background-image: url(img/post-21-copyright-485x598.jpg);
+    background-image: url(img/post-24-copyright-485x598.jpg);
     
 }
 .slide4 {
-    background-image: url(img/post-22-copyright-485x598.jpg);
+    background-image: url(img/post-23-copyright-485x598.jpg);
    
 }
 .slide5 {
