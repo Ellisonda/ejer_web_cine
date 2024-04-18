@@ -311,3 +311,18 @@ a {
     background-image: url(img/post-23-copyright-485x598.jpg);
    
 }
+
+/*FOOTER---------------------------------*/
+.footer {
+    display: flex;
+    background-color: #1B1D24;
+    justify-content: space-evenly;
+}
+.footer__media {
+    width: 17px;
+    height: 37px;
+
+}
+.footer__newsletter {
+    display: flex;
+}
