@@ -66,7 +66,16 @@ menu.main-menu  {
   list-style: none;
   gap: 50px;
   font-weight: 600;
+  
 }
+.main-menu li:not(last-child)::after  {
+        content: "/";
+        color:#a8a8a8;
+        gap: 10px;
+        padding-left: 25.2px;
+        
+        /*PREGUNTAR XQ NO PUEDO SEPARAR Y NO SE APLICA LA REGLA AL ULTIMO HIJO*/
+}   
 .wrapper {
     max-inline-size: 1200px;
     margin-inline: auto;
@@ -76,9 +85,7 @@ menu.main-menu  {
 }
 button, svg, a:hover, .main-menu, .aside__subtitle {
     cursor: pointer;
-} {
-
-}
+} 
 header  {
     
     justify-content:space-between;
@@ -94,8 +101,13 @@ header  {
     min-height: 89px;
 }
 .tools-menu {
-  
-  gap: 100px;
+  display: flex;
+  gap: 50px;
+}
+ul.social-menu::before {
+    content: "|";
+    color: #a8a8a8;
+    padding-right: 20px;
 }
 ul.social-menu {
     gap: 30px;
@@ -151,6 +163,16 @@ ul.social-menu {
         font-family: "Roboto Condensed", sans-serif;
         margin-bottom: 10%;
         
+        
+    }
+    a::after {
+        content: url(img/arrow.svg);
+        color:#E0041D;
+        display: inline-block;
+        width: 25px;
+        height: 30px;
+        background-color: aliceblue;
+        fill: #E0041D !important;
     }
     p {
         font-family: "Roboto", sans-serif;
@@ -186,6 +208,17 @@ a {
 .aside__title {
     font-weight: 900;
     text-transform: uppercase;
+    
+}
+.aside__title::after {
+    content: "";
+    background: #E0041D;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 16px;
+    margin-top: -1px;
+    height: 1px;
+    width: 28px;
 }
 .aside__list {
     width: 300px;
