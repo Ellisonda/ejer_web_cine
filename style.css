@@ -1,7 +1,7 @@
 /*RESET CSS */
 
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, blockquote, button, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -64,15 +64,21 @@ main {
 menu.main-menu  {
     display: flex; 
   list-style: none;
-  gap: 50px;
+  /* gap: 50px; */
   font-weight: 600;
   
 }
-.main-menu li:not(last-child)::after  {
+.main-menu li:hover {
+    text-decoration: underline 1px;
+    text-decoration-color: #E0041D;
+    
+}
+.main-menu li:not(:last-child)::after  {
         content: "/";
         color:#a8a8a8;
-        gap: 10px;
-        padding-left: 25.2px;
+        /* gap: 10px; */
+        padding-inline: 25.2px;
+        display: inline-block;
         
         /*PREGUNTAR XQ NO PUEDO SEPARAR Y NO SE APLICA LA REGLA AL ULTIMO HIJO*/
 }   
@@ -96,9 +102,10 @@ header  {
     text-transform: uppercase;
     font-family: "Roboto Condensed", sans-serif;
   /* position: fixed; */ /*Lo he desactivado para que no cause conflicto y lo traslade al left*/
-    top:0;
+    top: 0;
   /* z-index: 100; */
     min-height: 89px;
+    
 }
 .tools-menu {
   display: flex;
@@ -167,12 +174,12 @@ ul.social-menu {
     }
     a::after {
         content: url(img/arrow.svg);
-        color:#E0041D;
+        
         display: inline-block;
         width: 25px;
         height: 30px;
-        background-color: aliceblue;
-        fill: #E0041D !important;
+        
+        
     }
     p {
         font-family: "Roboto", sans-serif;
@@ -256,6 +263,16 @@ a {
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
 }
+.slider-films__button:not(:last-child)::after {
+    content: "/";
+    padding-inline:20px;
+}
+.slider-films__button.active {
+    color:white;
+}
+.slider-films__button:hover {
+    color: whiter;
+}
 .slider {
     display: flex;
     height: 300px;
@@ -292,25 +309,174 @@ a {
     padding: 18px;
 }
 .slide1 {
-    background-image: url(img/post-19-copyright-485x598.jpg);
+    background-image:linear-gradient(transparent 50%, #00000080), url(img/post-19-copyright-485x598.jpg);
     
 }
 .slide2 {
-    background-image: url(img/post-20-copyright-485x598.jpg);
+    background-image:linear-gradient(transparent 50%, #00000080), url(img/post-20-copyright-485x598.jpg);
   
 }
 .slide3 {
-    background-image: url(img/post-24-copyright-485x598.jpg);
+    background-image:linear-gradient(transparent 50%, #00000080), url(img/post-24-copyright-485x598.jpg);
     
 }
 .slide4 {
-    background-image: url(img/post-23-copyright-485x598.jpg);
+    background-image:linear-gradient(transparent 50%, #00000080), url(img/post-23-copyright-485x598.jpg);
    
 }
 .slide5 {
-    background-image: url(img/post-23-copyright-485x598.jpg);
+    background-image:linear-gradient(transparent 50%, #00000080), url(img/post-23-copyright-485x598.jpg);
    
 }
+.slider__slide_genre {
+    margin-top: 5px;
+    font-size: 12px;
+    display: inline-block;
+    text-transform: capitalize;
+    
+}
+.slider__slide_genre a {
+    
+    /*Pendiente d rellenar*/
+}
+/* NEW RELEASES */
+.background-light {
+    background-color: #fff;
+    width: 100%;
+     position: relative;
+    margin-top: 80px; 
+}
+.background-light::before { /*TRUCO PARA AÑADIR UN TROZO BLANCO SOBRE LA FIGURA. VA EN CONJUNTO CON EL POSITION RELATIVE Y EL MARGIN TOP DEL CONTAINER SUPERIOR*/
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 80px;
+    position:absolute;
+    top: -80px;
+    background-color: #fff;
+}
+.releases {
+    display: grid;
+    background-image: url(img/bg_samurai.jpg);
+    width: 100%;
+    height: 440px;
+    grid-template-columns: 1fr 1fr;
+    width: 1850px;
+    margin: 0 auto;
+    padding-left: 50px;
+
+}
+.releases__news {
+    grid-column: 2/3;
+    align-self: center;
+    padding: 20px 0;
+    max-width: 570px;
+    h2 {
+        color: black;
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: 37px;
+        margin: 20px 0;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    h6{
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: 13px;
+        color: black;
+        margin: 20px 0;
+        font-weight: 600;
+        .season {
+            margin-left: 13px;
+        }
+    }
+    h5{
+        color: #a8a8a8;
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: 13px;
+        margin: 20px 0;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+    }
+    p{
+        color: #a8a8a8;
+        font-family: "Roboto", sans-serif; 
+        font-size: 15px;
+        margin: 20px 0;
+    }
+}
+.releases__news_buttons {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 13px;
+    margin: 20px 0;
+    margin-right: 50px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+
+}
+.relase_info {
+    color: #E0041D  ;
+}
+
+.films {
+    display: flex;
+    height: 663px;
+    width: 485px;
+    flex-direction: row;
+    position: relative;
+}
+.films__posters {
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    align-items:end;
+
+}
+.films__posters::before {
+    background-image: linear-gradient(transparent 50%, #00000080);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+                /*PENDIENTE DE TERMINAR EL DEFRADADO*/
+}
+.poster__info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 38px 0;
+    margin: 0 0 49px;
+    gap: 15px;
+    justify-items: start;
+    h2 {
+        margin-top: 38px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    h2::before {
+        content: '';
+        display: inline-block;
+        width: 44px;
+        height: 1px;
+        background-color: #F8D350;
+    }
+    
+}
+/* .poster1 {
+    background-image: url(img/post-23-copyright-485x665.jpg);
+}
+.poster2 {
+    background-image: url(img/post-23-copyright-485x665.jpg);
+}
+.poster3 {
+    background-image: url(img/post-23-copyright-485x665.jpg);
+}
+.poster4 {
+    background-image: url(img/post-23-copyright-485x665.jpg);
+} */
 
 /*FOOTER---------------------------------*/
 .footer__container {
@@ -324,8 +490,8 @@ a {
     background-color: #1B1D24;
     justify-content:space-evenly ;
     height: 406px;
-    align-items: center;
-    padding: 32px 0;
+    align-items:first baseline;
+    padding: 150px 0 32px 0;
     width: 1200px;
     
 }
@@ -368,4 +534,32 @@ a {
 }
 .footer__movie_items:not(:first-child), .footer__links_items:not(:first-child) {
     margin:9px 0;    
+}
+.lateral__buttons {
+    
+    
+   
+    
+    
+    position: fixed;
+    right: 0;
+    top:50%;
+    
+    
+    z-index: 101;
+    transform: translateY(-50%); /*Para centrarlo realmente. Es un calculo q hace sobre el objeto, el -50% del tamaño del obeto*/
+
+}
+.lateral__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    
+}
+.lateral__button {
+    width: 68px;
+    height: 60px;
+    background-color: #E0041D;
+    color: #fff;
+    font-size: 20px;
 }
