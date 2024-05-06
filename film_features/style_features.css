@@ -1,3 +1,8 @@
+:root {
+    --color-dorado: #F0A500;
+}
+
+
 .header {
     padding-block: 0px 0px;
 }
@@ -85,7 +90,7 @@
                 
              }
              li:hover {
-                background-color: #F0A500;
+                background-color: var(--color-dorado);
                 width: 90%;
                 cursor: pointer;
 
