@@ -45,6 +45,11 @@ table {
 }
 
 /*----------------------------------------------------*/
+:root {
+    --color-background-main: #f2f2f2;
+    --color-background-dark: #1a1d24;
+    --color-underline-red: #E0041D;
+}
 * {
     margin: 0;
     padding: 0;
@@ -56,7 +61,7 @@ body {
     color: white;
 }
 .background-dark { /*Este backgroun nos permite martener el fondo oscuro en los margenes de header y en la parte del slider*/
-    background-color: #1a1d24;
+    background-color: var(--color-background-dark);
     
 }
 .sticky {
@@ -65,7 +70,7 @@ body {
     z-index: 101;
 }
 main {
-     background-color: #f2f2f2;  
+     background-color: var(--color-background-main);  
 }
 menu.main-menu  {
     display: flex; 
@@ -76,7 +81,8 @@ menu.main-menu  {
 }
 .main-menu li:hover {
     text-decoration: underline 1px;
-    text-decoration-color: #E0041D;
+    text-decoration-color: var(--color-underline-red);
+    
     
 }
 .main-menu li:not(:last-child)::after  {
