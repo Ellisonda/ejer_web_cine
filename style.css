@@ -79,9 +79,13 @@ menu.main-menu  {
   font-weight: 600;
   
 }
+.main-menu li {
+    padding-bottom: 10px;
+}
 .main-menu li:hover {
     text-decoration: underline 1px;
     text-decoration-color: var(--color-underline-red);
+    
     
     
 }
