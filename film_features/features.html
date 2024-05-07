@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="background-dark sticky"> 
-        <header class="header wrapper">
+        <header class="header wrapper" id="header">
             <img src="/img/logo-1x.png" alt="" class="logo">
             <menu class="main-menu">
                 <li>Home</li>
@@ -33,7 +33,7 @@
             </div>
         </header>
     </div>
-    <section class="film__banner">
+    <section class="film__banner" id="banner">
         <div class="banner__title">
             <h1>Gladiator</h1>
             <h2>2000</h2>
@@ -59,9 +59,10 @@
         </div>
     </section>
     <section class="film__information_container">
-        <div class="film_left_lateral">
+        <article class="film_left_lateral">
             <ul class="film__shortcuts">
-                <li class="film__links">Overview</li>
+                
+                <li  class="film__links">Overview</li>
                 <li class="film__links">Actors</li>
                 <li class="film__links">Comments</li>
                 <li class="film__links">Trailers</li>
@@ -69,27 +70,28 @@
             <a href="" class="watch_netflix"></a>
             <a href="" class="watch_amazon"></a>
             <a href="" class="watch_appleTv"></a>
-        </div>
-        <div class="film_central">
+        </article>
+        <article class="film_central">
             <div class="film_central_data">
-                <div class="film_date">Release</div>
-                <div class="film_director">Director</div>
-                <div class="film_country">Country</div>
-                <div class="film_studio">Producer</div>
-                <div class="film_writer">Writer</div>
-                <div class="film_lenguage">Lenguage</div>
-                <div class="film_categories">Category</div>
-
+                <ul class="film_data_list">
+                    <li class="film_atributes"> <label for="">Release</label>  <span>May 5, 2000</span></li>
+                    <li class="film_atributes"> <label for="">Director</label> <span>Ridley Scott</span></li>
+                    <li class="film_atributes"> <label for="">Country</label> <span>USA</span></li>
+                    <li class="film_atributes"> <label for="">Producer</label> <span>DreamWorks Pictures</span></li>
+                    <li class="film_atributes"> <label for="">Writer</label> <span>David Franzoni </span></li>
+                    <li class="film_atributes"> <label for="">Lenguage</label> <span>English, Spanish</span></li>
+                    <li class="film_atributes"> <label for="">Category</label> <span>Action, Adventure, Drama</span></li>
+                </ul>
             </div>  
             <p><q>"What we do in life echoes in eternity."</q><br>
                 In the year 180, the death of emperor Marcus Aurelius throws the Roman Empire into chaos.
-                 Maximus is one of the Roman army's most capable and trusted generals and a key advisor to the emperor. 
-                 As Marcus' devious son Commodus ascends to the throne, Maximus is set to be executed.
-                  He escapes, but is captured by slave traders. Renamed Spaniard and forced to become a gladiator, Maximus
-                   must battle to the death with other men for the amusement of paying audiences.</p>
-        </div>
-        <div class="film_right_lateral">
-            <ul class="films_user_interaction">
+                Maximus is one of the Roman army's most capable and trusted generals and a key advisor to the emperor. 
+                As Marcus' devious son Commodus ascends to the throne, Maximus is set to be executed.
+                He escapes, but is captured by slave traders. Renamed Spaniard and forced to become a gladiator, Maximus
+                must battle to the death with other men for the amusement of paying audiences.</p>
+        </article>
+        <article class="film_right_lateral">
+            <ul  class="films_user_interaction">
                 <li class="films__lateral_list item1">Buy it</li>
                 <li class="films__lateral_list item2"> Add to favorites</li>
                 <li class="films__lateral_list item3"> Add to collection</li>
@@ -97,7 +99,7 @@
                 <li class="films__lateral_list item5"> Add a comment</li>
                 
             </ul>
-        </div>
+        </article>
     </section>
 
     <section class="footer__container background-dark">
@@ -106,7 +108,8 @@
             <section class="footer__brand">
                 <ul class="footer__list_brand">
                     <li>
-                        <img src="/img/logo-1x.png" alt="" class="footer__logo">
+                        <img  src="/img/logo-1x.png" alt="" class="footer__logo">
+                        
                         <p>ThemeREX © 2024. All rights reserved.</p>
                     </li>
                     <li class="footer__registration"></li>
