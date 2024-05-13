@@ -57,6 +57,7 @@ table {
     --color-graylighter-b8: #b8b8b8;
     --color-grayslider: #b8babb;
     --color-white: #fff;
+    scroll-behavior: smooth;
 }
 * {
     margin: 0;
