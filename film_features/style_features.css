@@ -206,6 +206,54 @@
             font-family: "Lora", sans-serif;
             font-size: 17px;
         }
+        .film_actors {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 3rem;
+            margin-block: 1rem;
+            scroll-margin-top: 260px;
+            
+        }
+        .actor_list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 1rem;
+            width: 100%;
+        }
+        .actor_file {
+            display: flex;
+            flex-direction: row;
+            width: 100px;
+            height: 100px;
+            img {
+                border-radius: 5px;
+                box-shadow: 5px 5px 5px hsl(0, 0%, 50%);
+                width: 70px;
+                height: 100px;
+                transition: .5s;
+
+                &:hover{
+                    cursor: pointer;
+                    transform: scale(1.25);
+                }
+            }  
+            
+            figcaption {
+                font-size: 11px;
+                font-family: "Lora", sans-serif;
+                color: var(--color-background-dark);
+                line-height: normal;
+                text-align: center;
+            }
+        }
+        
+        .actor_figure {
+            display: flex;
+            width: 100px;
+            height: 100px;
+        }
         .film_trailer_container {
             display: flex;
             justify-content: center;
@@ -223,6 +271,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            flex-wrap: wrap;
             gap: 1em;
             label {
                 color: var(--color-red);

@@ -86,7 +86,7 @@ menu.main-menu  {
   list-style: none;
   /* gap: 50px; */
   font-weight: 600;
-  
+  font-size: 16px;
 }
 
 .main-menu li:hover {
@@ -128,6 +128,7 @@ header  {
     
     
     min-height: 89px;
+    
     
 }
 .tools-menu {
@@ -193,6 +194,7 @@ ul.social-menu {
         margin-bottom: 10%;
         letter-spacing: 1px;
         font-size: 13px;
+      
     font-weight: 700;
     transition: .5s;
         
@@ -229,7 +231,7 @@ a {
     font-family: "Roboto Condensed", sans-serif;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 13px;
+  
     letter-spacing: 1px;
 }
 
@@ -1125,8 +1127,15 @@ a {
     top:50%;
     z-index: 101;
     transform: translateY(-50%); /*Para centrarlo realmente. Es un calculo q hace sobre el objeto, el -50% del tamaño del obeto*/
+    
+    }
 
-}
+/* .parche {
+    height: 60px;
+    width: 90px;
+    background-color: var(--color-background-dark);
+    visibility: hidden;
+} */
 .lateral__list {
     display: flex;
     flex-direction: column;
@@ -1144,9 +1153,47 @@ a {
     justify-content: center;
     align-items: center;
     justify-items: center;
+    transition: .5s;
     
     svg {
         fill: white;
         width: 70%;
     }
+}
+.btn_top {
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-background-dark);
+
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    z-index: 102;
+    .btn_to_top {
+        width: 48px;
+    height: 48px;
+    background-color: var(--color-background-dark);
+   
+    a {
+        width: inherit;
+        height: inherit;
+        
+        
+
+    }
+    svg {
+        fill: white;
+        width: 20px;
+        height: 20px;
+    }
+    }
+}  
+
+.lateral__button:hover {
+    transform:translateX(-20%);
+    padding-inline-end: 20%;
+    
+}
+.parche:hover {
+    visibility: visible;
 }
