@@ -192,35 +192,43 @@
         letter-spacing: .1em;
         padding: 3em;
         line-height: 1.5em;
-        border: 3px solid var(--color-background-dark);
-        border-radius: 5%;
+      
         color: black;
-
-        q {
-            font-style: italic;
-            margin-bottom: 5%;
+        .film_info {
+            margin-top: 10rem;
+            q {
+                font-style: italic;
+                margin-bottom: 5%;
+            }
+            p {
+                margin-block: 10%;
+    
+                font-family: "Lora", sans-serif;
+                font-size: 17px;
+            }
         }
-        p {
-            margin-block: 10%;
-
-            font-family: "Lora", sans-serif;
-            font-size: 17px;
-        }
+       
         .film_actors {
             display: flex;
+            grid-template-columns: min-content;
             flex-direction: row;
             width: 100%;
             height: 3rem;
             margin-block: 1rem;
             scroll-margin-top: 260px;
+            justify-content: center;
+            justify-items: stretch;
+            align-items: center;
+            flex-wrap: wrap;
             
         }
         .actor_list {
             display: flex;
             flex-direction: row;
-            flex-wrap: nowrap;
-            gap: 1rem;
+            flex-wrap: wrap;
+            gap: 2rem;
             width: 100%;
+            justify-content: center;
         }
         .actor_file {
             display: flex;
@@ -287,7 +295,9 @@
         width: 30%;
         height: 100%;
         color: black;
-        
+        position: sticky;
+        left: 0;
+        top:89px;
 
         .films_user_interaction {
             display: flex;
