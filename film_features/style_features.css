@@ -22,13 +22,15 @@
     background-image: url(/film_features/img_features/banner2_gladiator.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     align-items: flex-start;
     justify-content: flex-end;
     flex-direction: column;
+
     .banner__title {
         font-family: "Roboto Condensed", sans-serif;
         letter-spacing: .1rem;
-        font-size: 47px;
+        font-size: 3em;
         font-weight: 600;
         display: inline-flex;
         flex-direction: row;
@@ -85,6 +87,7 @@
     align-items: flex-start;
 
     height: 130vh;
+    min-height: 65rem;
     background-color: var(--color-background-light);
     /* border-color: 5px solid brown; */
     border-radius: 1%;
@@ -93,8 +96,8 @@
     .film_left_lateral {
         display: flex;
         flex-direction: column;
-        width: 20%;
-        height: 40%;
+        width: min(300px, 20%);
+        height: 33rem;
         justify-items: center;
         background-color: var(--color-background-grey);
         /* border-radius: 8%; */
@@ -187,10 +190,11 @@
         display: flex;
         flex-direction: column;
         width: 50%;
-        height: 85%;
+        height: 30rem;
         background-color:var(--color-background-light);
         letter-spacing: .1em;
         padding: 3em;
+        
         line-height: 1.5em;
       
         color: black;
@@ -210,7 +214,7 @@
        
         .film_actors {
             display: flex;
-            grid-template-columns: min-content;
+            
             flex-direction: row;
             width: 100%;
             height: 3rem;
@@ -221,12 +225,13 @@
             align-items: center;
             flex-wrap: wrap;
             
+            
         }
         .actor_list {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            gap: 2rem;
+            gap: .3rem;
             width: 100%;
             justify-content: center;
         }
@@ -238,10 +243,10 @@
             img {
                 border-radius: 5px;
                 box-shadow: 5px 5px 5px hsl(0, 0%, 50%);
-                width: 70px;
-                height: 100px;
+                width: 50px;
+                height: 80px;
                 transition: .5s;
-
+                
                 &:hover{
                     cursor: pointer;
                     transform: scale(1.25);
@@ -253,19 +258,16 @@
                 font-family: "Lora", sans-serif;
                 color: var(--color-background-dark);
                 line-height: normal;
-                text-align: center;
+                
             }
         }
         
-        .actor_figure {
-            display: flex;
-            width: 100px;
-            height: 100px;
-        }
+        
         .film_trailer_container {
             display: flex;
             justify-content: center;
             scroll-margin-top: 120px;
+            
             
         }
         .film_central_data {
@@ -280,7 +282,7 @@
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 1em;
+           
             label {
                 color: var(--color-red);
                 font-family: "Roboto Condensed", sans-serif;
@@ -363,3 +365,104 @@
         }
     }
 }  
+
+.comments_container {
+    display: flex;
+    justify-content: center;
+    /* border: #1B1D24 solid 1px; */
+    max-width: 100%;
+    /* max-height: 150px; */
+    height: 300px;
+    justify-content: center;
+    flex-direction: column;
+    margin-block: 5rem;
+    margin-inline: 20%;
+    .grid_comment_box {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        background: green;
+        gap: 2rem;
+        grid-template-rows: repeat(auto ); */
+    }
+    .comment {
+        background-color: var(--color-background-grey);
+
+        .comment_content {
+            display: flex;
+            flex-direction: column;
+            gap:2rem;
+            align-items: flex-start;
+            font-family: "Lora", sans-serif;
+            font-size: 17px;
+            color: var(--color-background-dark);
+            text-area {
+                border: none;
+                box-sizing: border-box;
+                width: 100%;
+                max-width: 100%;
+            }
+            span {
+                color: var(--color-red);
+                font-weight: 400;
+            }
+            button {
+                border: 1px solid var(--color-red);
+                background-color: var(--color-dorado);
+                padding: 5px;
+
+            }
+            button:hover {
+                color:#EAEAEA
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+
+    .film_actors {
+        /* display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 3rem;
+        margin-block: 1rem;
+        scroll-margin-top: 260px; */
+        
+        
+    }
+    .actor_list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 0;
+        width: 500px;
+        max-width: 700px;
+    }
+    .actor_file {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        width: 50x;
+        height: 50px;
+        
+
+        img {
+            visibility: hidden;
+        }
+        figure{
+            visibility: hidden;
+        }
+        figcaption {
+            visibility: hidden;
+        }
+        
+    }
+
+}
+@media (max-width: 500px) {
+    .film_actors {
+        visibility: collapse;
+    }
+}
