@@ -366,6 +366,8 @@
     }
 }  
 
+/* SECCION COMENTARIOS */
+
 .comments_container {
     display: flex;
     justify-content: center;
@@ -420,9 +422,9 @@
     }
 }
 
-@media (max-width: 1400px) {
+/* @media (max-width: 1400px) {
 
-    .film_actors {
+    .film_actors { */
         /* display: flex;
         flex-direction: row;
         width: 100%;
@@ -431,7 +433,7 @@
         scroll-margin-top: 260px; */
         
         
-    }
+    /* }
     .actor_list {
         display: flex;
         flex-direction: row;
@@ -465,4 +467,4 @@
     .film_actors {
         visibility: collapse;
     }
-}
+} */
